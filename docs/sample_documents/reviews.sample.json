@@ -1,0 +1,83 @@
+{
+  "review_id": "REV-00004",
+  "reviewer_id": "USR-00003",
+  "reviewed_user_id": "USR-00004",
+  "item_id": "ITM-00003",
+  "rating": 5,
+  "comment": "Lovely borrower, very respectful of my things.",
+  "created_at": "2025-05-14T03:24:11Z",
+  "updated_at": "2025-05-14T03:24:11Z",
+  "transaction_id": "TXN-00002",
+  "direction": "lender_to_borrower",
+  "ratings": {
+    "overall": 5,
+    "aspects": {
+      "communication": {
+        "score": 5,
+        "weight": 0.333
+      },
+      "care_of_item": {
+        "score": 5,
+        "weight": 0.333
+      },
+      "punctuality": {
+        "score": 5,
+        "weight": 0.333
+      }
+    }
+  },
+  "context": {
+    "item": {
+      "name": "Canon EOS R50 Mirrorless Camera",
+      "category": "electronics"
+    },
+    "transaction": {
+      "borrowed_at": "2025-05-07T14:54:28Z",
+      "returned_at": "2025-05-10T13:55:50Z",
+      "outcome": {
+        "on_time": true,
+        "days_late": 0,
+        "damage": "none"
+      }
+    },
+    "reviewer": {
+      "name": "Oliver Bennett",
+      "role_in_transaction": "lender",
+      "trust_at_review": {
+        "score": 71.7,
+        "breakdown_hint": {
+          "tier": "silver"
+        }
+      }
+    }
+  },
+  "moderation": {
+    "status": "published",
+    "flags": [],
+    "checks": {
+      "automatic": {
+        "toxicity_score": 0.05,
+        "passed": true,
+        "checked_at": "2025-05-14T03:24:11Z"
+      },
+      "manual": {
+        "by": null,
+        "at": null,
+        "decision": null
+      }
+    }
+  },
+  "response": {
+    "comment": "Sorry about that - lesson learned.",
+    "at": "2025-05-16T21:23:09Z"
+  },
+  "engagement": {
+    "helpful": {
+      "count": 2,
+      "voters": [
+        "USR-00040",
+        "USR-00023"
+      ]
+    }
+  }
+}

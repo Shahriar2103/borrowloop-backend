@@ -1,0 +1,407 @@
+### BorrowLoop API - open in VS Code with the 'REST Client' extension and click 'Send Request'.
+### Run the three login requests first; their tokens are reused by every other request.
+
+@baseUrl = http://127.0.0.1:5000/api
+
+# @name loginBorrower
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{"email": "borrower@borrowloop.com", "password": "Password@123"}
+
+###
+# @name loginLender
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{"email": "lender@borrowloop.com", "password": "Password@123"}
+
+###
+# @name loginAdmin
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{"email": "admin@borrowloop.com", "password": "Admin@123"}
+
+###
+
+@borrowerToken = {{loginBorrower.response.body.data.access_token}}
+@lenderToken = {{loginLender.response.body.data.access_token}}
+@adminToken = {{loginAdmin.response.body.data.access_token}}
+
+######## 0. Meta
+
+### Health check
+GET {{baseUrl}}/health
+
+
+### Endpoint index
+GET {{baseUrl}}
+
+
+### Categories & conditions
+GET {{baseUrl}}/categories
+
+
+######## 1. Guest
+
+### Register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "Sam Carter",
+  "email": "sam.carter@example.com",
+  "password": "Secret123",
+  "role": "borrower",
+  "neighbourhood": "Hackney Central",
+  "interests": [
+    "books",
+    "tools"
+  ]
+}
+
+
+### List available items
+GET {{baseUrl}}/items?page=1&per_page=10&sort=-created_at
+
+
+### Item details
+GET {{baseUrl}}/items/ITM-00001
+
+
+### Search items
+GET {{baseUrl}}/items/search?category=electronics&name=camera&available=all&max_deposit=200
+
+
+######## 2. Users
+
+### My account
+GET {{baseUrl}}/auth/me
+Authorization: Bearer {{borrowerToken}}
+
+
+### View profile
+GET {{baseUrl}}/users/USR-00003
+Authorization: Bearer {{borrowerToken}}
+
+
+### Update my profile
+PUT {{baseUrl}}/users/USR-00004
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "bio": "Student who borrows more than buys!",
+  "preferences": {
+    "notifications": {
+      "events": {
+        "return_reminders": {
+          "schedule": {
+            "days_before_due": 2
+          }
+        }
+      }
+    }
+  }
+}
+
+
+### Trust score
+GET {{baseUrl}}/users/USR-00004/trust-score
+Authorization: Bearer {{borrowerToken}}
+
+
+### User's listings
+GET {{baseUrl}}/users/USR-00003/items
+Authorization: Bearer {{borrowerToken}}
+
+
+######## 3. Items
+
+### Add item
+POST {{baseUrl}}/items
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "name": "Bosch Laser Measure",
+  "category": "tools",
+  "subcategory": "hand_tools",
+  "description": "Accurate laser distance measure up to 50m.",
+  "condition": "like_new",
+  "deposit": 25,
+  "tags": [
+    "measure",
+    "diy"
+  ],
+  "lending_rules": {
+    "min_days": 1,
+    "max_days": 7,
+    "min_trust_score": 40
+  },
+  "pickup_methods": [
+    "collection",
+    "meetup"
+  ],
+  "specifications": {
+    "technical": {
+      "range": {
+        "max_m": 50,
+        "accuracy_mm": 1.5
+      }
+    }
+  }
+}
+
+
+### Update my item
+PUT {{baseUrl}}/items/ITM-00111
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "deposit": 160,
+  "description": "Mirrorless camera vlogging kit with two batteries and a 64GB card."
+}
+
+
+### Remove my item
+DELETE {{baseUrl}}/items/ITM-00001
+Authorization: Bearer {{lenderToken}}
+
+
+######## 4. Borrow requests
+
+### Request an item
+POST {{baseUrl}}/borrow-requests
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "item_id": "ITM-00003",
+  "start_date": "2026-11-01",
+  "return_date": "2026-11-04",
+  "message": "Could I borrow this for a long weekend?",
+  "pickup_method": "collection"
+}
+
+
+### My requests (as borrower)
+GET {{baseUrl}}/borrow-requests?role=borrower&status=pending,accepted
+Authorization: Bearer {{borrowerToken}}
+
+
+### Requests for my items (as lender)
+GET {{baseUrl}}/borrow-requests?role=lender&status=pending
+Authorization: Bearer {{lenderToken}}
+
+
+### Accept a request
+PUT {{baseUrl}}/borrow-requests/REQ-00582
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "status": "accepted"
+}
+
+
+### Reject a request
+PUT {{baseUrl}}/borrow-requests/REQ-00599
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "status": "rejected",
+  "reason": "Sorry, I need it that weekend."
+}
+
+
+### Change dates (borrower) - uses the request you created above
+PUT {{baseUrl}}/borrow-requests/REQ-00615
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "start_date": "2026-11-02",
+  "return_date": "2026-11-05",
+  "message": "Could we shift by a day?"
+}
+
+
+### Cancel my request - uses the request you created above
+DELETE {{baseUrl}}/borrow-requests/REQ-00615
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "reason": "Plans changed"
+}
+
+
+######## 5. Transactions
+
+### Record collection (start transaction)
+POST {{baseUrl}}/transactions
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "request_id": "REQ-00591",
+  "condition": "like_new",
+  "notes": "Checked together at pickup"
+}
+
+
+### Active transactions
+GET {{baseUrl}}/transactions?role=all
+Authorization: Bearer {{borrowerToken}}
+
+
+### Transaction history
+GET {{baseUrl}}/transactions/history?role=borrower&per_page=5
+Authorization: Bearer {{borrowerToken}}
+
+
+### Transaction details
+GET {{baseUrl}}/transactions/TXN-00001
+Authorization: Bearer {{adminToken}}
+
+
+### Record return (complete) - uses the transaction created above
+PUT {{baseUrl}}/transactions/TXN-00400
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "return_condition": "good",
+  "notes": "All accessories returned"
+}
+
+
+######## 6. Reviews
+
+### Leave a review
+POST {{baseUrl}}/reviews
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "transaction_id": "TXN-00374",
+  "rating": 5,
+  "comment": "Great experience, item exactly as described.",
+  "aspects": {
+    "communication": 5,
+    "item_accuracy": 5,
+    "punctuality": 4
+  }
+}
+
+
+### Reviews for a user
+GET {{baseUrl}}/reviews/USR-00003?as=lender
+Authorization: Bearer {{borrowerToken}}
+
+
+### Respond to a review
+POST {{baseUrl}}/reviews/REV-00002/response
+Authorization: Bearer {{lenderToken}}
+Content-Type: application/json
+
+{
+  "comment": "Thanks, happy to lend again!"
+}
+
+
+### Mark review helpful
+POST {{baseUrl}}/reviews/REV-00001/helpful
+Authorization: Bearer {{borrowerToken}}
+
+
+######## 7. Reports
+
+### Report something
+POST {{baseUrl}}/reports
+Authorization: Bearer {{borrowerToken}}
+Content-Type: application/json
+
+{
+  "target_type": "item",
+  "target_id": "ITM-00007",
+  "category": "content",
+  "subcategory": "misleading_description",
+  "description": "Photos don't match the item that was handed over."
+}
+
+
+### My reports
+GET {{baseUrl}}/reports/mine
+Authorization: Bearer {{borrowerToken}}
+
+
+######## 8. Admin
+
+### All users
+GET {{baseUrl}}/admin/users?role=borrower&sort=-trust_score&per_page=10
+Authorization: Bearer {{adminToken}}
+
+
+### Remove a user
+DELETE {{baseUrl}}/admin/users/USR-00059
+Authorization: Bearer {{adminToken}}
+
+
+### All items
+GET {{baseUrl}}/admin/items?flagged=true
+Authorization: Bearer {{adminToken}}
+
+
+### Remove an item
+DELETE {{baseUrl}}/admin/items/ITM-00009
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "reason": "prohibited_item"
+}
+
+
+### All transactions
+GET {{baseUrl}}/admin/transactions?overdue=true
+Authorization: Bearer {{adminToken}}
+
+
+### Reports
+GET {{baseUrl}}/admin/reports?status=open,under_review
+Authorization: Bearer {{adminToken}}
+
+
+### Update a report (start review)
+PUT {{baseUrl}}/admin/reports/RPT-00006
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "status": "under_review",
+  "note": "Looking into it"
+}
+
+
+### Resolve a report
+PUT {{baseUrl}}/admin/reports/RPT-00006
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "resolution": {
+    "action": "warning",
+    "notes": "First warning issued"
+  }
+}
+
+
+### Analytics
+GET {{baseUrl}}/admin/analytics
+Authorization: Bearer {{adminToken}}
+

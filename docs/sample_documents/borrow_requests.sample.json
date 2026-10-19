@@ -1,0 +1,207 @@
+{
+  "request_id": "REQ-00001",
+  "item_id": "ITM-00002",
+  "borrower_id": "USR-00004",
+  "owner_id": "USR-00003",
+  "start_date": "2025-05-06",
+  "return_date": "2025-05-07",
+  "status": "accepted",
+  "created_at": "2025-05-01T08:13:47Z",
+  "updated_at": "2025-05-02T06:24:32Z",
+  "duration_days": 1,
+  "message": "Need this for a uni project, happy to collect whenever suits you.",
+  "item_snapshot": {
+    "name": "Karcher K4 Pressure Washer",
+    "category": "tools",
+    "condition": "new",
+    "deposit": {
+      "amount": 55.0,
+      "currency": "GBP"
+    },
+    "owner": {
+      "user_id": "USR-00003",
+      "name": "Oliver Bennett",
+      "trust": {
+        "score": 65.5,
+        "tier": "new"
+      }
+    }
+  },
+  "borrower_snapshot": {
+    "name": "Priya Shah",
+    "trust": {
+      "score": 65.3,
+      "tier": "new"
+    },
+    "verification": {
+      "level": "full"
+    },
+    "community": {
+      "neighbourhood": "Camden Town",
+      "borough": "Camden",
+      "zone": {
+        "code": "NW1-CAM",
+        "name": "Camden Town sharing circle",
+        "radius_km": 2.5
+      }
+    }
+  },
+  "logistics": {
+    "pickup": {
+      "method": "delivery",
+      "location": {
+        "community": {
+          "neighbourhood": "Camden Town",
+          "borough": "Camden",
+          "zone": {
+            "code": "NW1-CAM",
+            "name": "Camden Town sharing circle",
+            "radius_km": 2.5
+          }
+        },
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            -0.146603,
+            51.536343
+          ]
+        }
+      },
+      "scheduled": {
+        "date": "2025-05-06",
+        "window": {
+          "from": "15:00",
+          "to": "17:00"
+        }
+      }
+    },
+    "return": {
+      "method": "delivery",
+      "location": {
+        "community": {
+          "neighbourhood": "Camden Town",
+          "borough": "Camden",
+          "zone": {
+            "code": "NW1-CAM",
+            "name": "Camden Town sharing circle",
+            "radius_km": 2.5
+          }
+        },
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            -0.146603,
+            51.536343
+          ]
+        }
+      },
+      "scheduled": {
+        "date": "2025-05-07",
+        "window": {
+          "from": "15:00",
+          "to": "17:00"
+        }
+      }
+    }
+  },
+  "negotiation": {
+    "rounds": 2,
+    "thread": [
+      {
+        "message_id": "REQ-00001-M1",
+        "sender_id": "USR-00004",
+        "sent_at": "2025-05-01T08:13:47Z",
+        "body": "Need this for a uni project, happy to collect whenever suits you.",
+        "proposal": {
+          "start_date": "2025-05-06",
+          "return_date": "2025-05-07",
+          "terms": {
+            "deposit": {
+              "amount": 55.0,
+              "currency": "GBP"
+            },
+            "pickup": {
+              "method": "delivery",
+              "window": {
+                "from": "15:00",
+                "to": "17:00"
+              }
+            }
+          }
+        }
+      },
+      {
+        "message_id": "REQ-00001-M2",
+        "sender_id": "USR-00004",
+        "sent_at": "2025-05-01T08:31:40Z",
+        "body": "Would these dates work instead?",
+        "proposal": {
+          "start_date": "2025-05-06",
+          "return_date": "2025-05-07",
+          "terms": {
+            "deposit": {
+              "amount": 55.0,
+              "currency": "GBP"
+            },
+            "pickup": {
+              "method": "delivery",
+              "window": {
+                "from": "15:00",
+                "to": "17:00"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "status_history": [
+    {
+      "status": "pending",
+      "at": "2025-05-01T08:13:47Z",
+      "by": {
+        "user_id": "USR-00004",
+        "role": "borrower"
+      },
+      "note": "Request submitted"
+    },
+    {
+      "status": "pending",
+      "at": "2025-05-01T08:31:40Z",
+      "by": {
+        "user_id": "USR-00004",
+        "role": "borrower"
+      },
+      "note": "Borrower updated the request"
+    },
+    {
+      "status": "accepted",
+      "at": "2025-05-02T06:24:32Z",
+      "by": {
+        "user_id": "USR-00003",
+        "role": "lender"
+      },
+      "note": "Request accepted"
+    },
+    {
+      "status": "accepted",
+      "at": "2025-05-06T13:52:18Z",
+      "by": {
+        "user_id": "USR-00003",
+        "role": "lender"
+      },
+      "note": "Item collected - transaction TXN-00001"
+    }
+  ],
+  "decision": {
+    "by": "USR-00003",
+    "at": "2025-05-02T06:24:32Z",
+    "reason": null,
+    "auto": {
+      "triggered": false,
+      "rule": null
+    }
+  },
+  "cancellation": null,
+  "transaction_id": "TXN-00001"
+}

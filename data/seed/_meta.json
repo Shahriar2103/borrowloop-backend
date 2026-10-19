@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-10-18T17:13:47Z",
+  "generator": "data/generate_dataset.py",
+  "counts": {
+    "users": 64,
+    "items": 113,
+    "borrow_requests": 614,
+    "transactions": 399,
+    "reviews": 524,
+    "reports": 21
+  },
+  "demo_accounts": [
+    {
+      "role": "admin",
+      "email": "admin@borrowloop.com",
+      "password": "Admin@123",
+      "user_id": "USR-00001"
+    },
+    {
+      "role": "admin",
+      "email": "moderator@borrowloop.com",
+      "password": "Admin@123",
+      "user_id": "USR-00002"
+    },
+    {
+      "role": "lender",
+      "email": "lender@borrowloop.com",
+      "password": "Password@123",
+      "user_id": "USR-00003"
+    },
+    {
+      "role": "borrower",
+      "email": "borrower@borrowloop.com",
+      "password": "Password@123",
+      "user_id": "USR-00004"
+    }
+  ],
+  "other_accounts_password": "Password@123"
+}

@@ -1,0 +1,2085 @@
+[
+  {
+    "report_id": "RPT-00001",
+    "reporter_id": "USR-00008",
+    "target": {
+      "type": "transaction",
+      "id": "TXN-00027",
+      "snapshot": {
+        "item": "Nintendo Switch OLED Bundle",
+        "lender_id": "USR-00003",
+        "borrower_id": "USR-00008",
+        "status": "completed"
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "The lender kept part of my deposit for damage that was already there at pickup."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-2860/800/600",
+          "type": "image",
+          "uploaded_at": "2025-07-27T00:14:54Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00027",
+        "request_id": "REQ-00037"
+      }
+    },
+    "status": "open",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2025-07-28T00:14:54Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2025-07-27T00:14:54Z",
+        "by": {
+          "user_id": "USR-00008",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2025-07-27T00:14:54Z",
+    "updated_at": "2025-07-27T00:14:54Z"
+  },
+  {
+    "report_id": "RPT-00002",
+    "reporter_id": "USR-00008",
+    "target": {
+      "type": "transaction",
+      "id": "TXN-00043",
+      "snapshot": {
+        "item": "Focusrite Scarlett 2i2 Interface",
+        "lender_id": "USR-00003",
+        "borrower_id": "USR-00008",
+        "status": "completed"
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "The lender kept part of my deposit for damage that was already there at pickup."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-738/800/600",
+          "type": "image",
+          "uploaded_at": "2025-08-28T10:44:16Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00043",
+        "request_id": "REQ-00058"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2025-08-29T10:44:16Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": {
+      "action": "none",
+      "notes": "Pickup photos confirm the damage was new.",
+      "by": "USR-00002",
+      "at": "2025-08-31T05:58:19Z",
+      "effects": {
+        "user": null,
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2025-08-28T10:44:16Z",
+        "by": {
+          "user_id": "USR-00008",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2025-08-28T21:39:13Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2025-08-31T05:58:19Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "Pickup photos confirm the damage was new.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2025-08-28T10:44:16Z",
+    "updated_at": "2025-08-31T05:58:19Z"
+  },
+  {
+    "report_id": "RPT-00003",
+    "reporter_id": "USR-00009",
+    "target": {
+      "type": "review",
+      "id": "REV-00138",
+      "snapshot": {
+        "reviewer_id": "USR-00014",
+        "reviewed_user_id": "USR-00009",
+        "rating": 2,
+        "comment": "Hard to get hold of for the return."
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "inappropriate_review",
+      "description": "This review is unfair and not what happened."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-5607/800/600",
+          "type": "image",
+          "uploaded_at": "2025-11-23T01:13:14Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-5406/800/600",
+          "type": "image",
+          "uploaded_at": "2025-11-23T01:13:14Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "dismissed",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2025-11-26T01:13:14Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2025-11-23T01:13:14Z",
+        "by": {
+          "user_id": "USR-00009",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2025-11-23T10:49:34Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2025-11-25T19:13:37Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Review reflects the transaction outcome.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "dismissed"
+          }
+        }
+      }
+    ],
+    "created_at": "2025-11-23T01:13:14Z",
+    "updated_at": "2025-11-25T19:13:37Z"
+  },
+  {
+    "report_id": "RPT-00004",
+    "reporter_id": "USR-00012",
+    "target": {
+      "type": "user",
+      "id": "USR-00009",
+      "snapshot": {
+        "name": "Theo Edwards",
+        "role": "borrower",
+        "trust_score": 74.4
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "Borrowed my Anker 20000mAh Power Bank and it came back damaged."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-6507/800/600",
+          "type": "image",
+          "uploaded_at": "2025-11-30T13:00:12Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00106",
+        "request_id": "REQ-00151"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2025-12-01T13:00:12Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": {
+      "action": "warning",
+      "notes": "First warning issued.",
+      "by": "USR-00001",
+      "at": "2025-12-03T23:07:24Z",
+      "effects": {
+        "user": {
+          "user_id": "USR-00009",
+          "action": "warning"
+        },
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2025-11-30T13:00:12Z",
+        "by": {
+          "user_id": "USR-00012",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2025-12-01T16:24:38Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      },
+      {
+        "at": "2025-12-03T23:07:24Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "First warning issued.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2025-11-30T13:00:12Z",
+    "updated_at": "2025-12-03T23:07:24Z"
+  },
+  {
+    "report_id": "RPT-00005",
+    "reporter_id": "USR-00026",
+    "target": {
+      "type": "user",
+      "id": "USR-00012",
+      "snapshot": {
+        "name": "Imogen Wright",
+        "role": "lender",
+        "trust_score": 67.8
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Ryobi 18V Hedge Trimmer and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [],
+      "related": {
+        "transaction_id": "TXN-00131",
+        "request_id": "REQ-00178"
+      }
+    },
+    "status": "under_review",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2025-12-29T01:42:30Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2025-12-28T01:42:30Z",
+        "by": {
+          "user_id": "USR-00026",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2025-12-28T07:40:26Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      }
+    ],
+    "created_at": "2025-12-28T01:42:30Z",
+    "updated_at": "2025-12-28T07:40:26Z"
+  },
+  {
+    "report_id": "RPT-00006",
+    "reporter_id": "USR-00017",
+    "target": {
+      "type": "user",
+      "id": "USR-00013",
+      "snapshot": {
+        "name": "Joshua Jones",
+        "role": "borrower",
+        "trust_score": 55.7
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "Borrowed my Yoga Starter Kit (Mat, Blocks, Strap) and it came back damaged."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-2147/800/600",
+          "type": "image",
+          "uploaded_at": "2026-01-13T05:58:03Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00147",
+        "request_id": "REQ-00210"
+      }
+    },
+    "status": "open",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-01-14T05:58:03Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-01-13T05:58:03Z",
+        "by": {
+          "user_id": "USR-00017",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-01-13T05:58:03Z",
+    "updated_at": "2026-01-13T05:58:03Z"
+  },
+  {
+    "report_id": "RPT-00007",
+    "reporter_id": "USR-00028",
+    "target": {
+      "type": "user",
+      "id": "USR-00031",
+      "snapshot": {
+        "name": "Daniel Okoro",
+        "role": "borrower",
+        "trust_score": 67.1
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Dell XPS 13 Laptop and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [],
+      "related": {
+        "transaction_id": "TXN-00210",
+        "request_id": "REQ-00298"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-03-20T20:58:52Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": {
+      "action": "suspend_user",
+      "notes": "Repeated late returns.",
+      "by": "USR-00002",
+      "at": "2026-03-22T17:05:49Z",
+      "effects": {
+        "user": {
+          "user_id": "USR-00031",
+          "action": "suspend_user"
+        },
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-03-19T20:58:52Z",
+        "by": {
+          "user_id": "USR-00028",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-03-20T01:46:30Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-03-22T17:05:49Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "Repeated late returns.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-03-19T20:58:52Z",
+    "updated_at": "2026-03-22T17:05:49Z"
+  },
+  {
+    "report_id": "RPT-00008",
+    "reporter_id": "USR-00029",
+    "target": {
+      "type": "user",
+      "id": "USR-00015",
+      "snapshot": {
+        "name": "Sophia Smith",
+        "role": "lender",
+        "trust_score": 70.7
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Sigma 30mm f/1.4 Portrait Lens and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-3642/800/600",
+          "type": "image",
+          "uploaded_at": "2026-04-18T11:45:27Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-9147/800/600",
+          "type": "image",
+          "uploaded_at": "2026-04-18T11:45:27Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00229",
+        "request_id": "REQ-00323"
+      }
+    },
+    "status": "dismissed",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-04-19T11:45:27Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-04-18T11:45:27Z",
+        "by": {
+          "user_id": "USR-00029",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-04-19T09:31:40Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      },
+      {
+        "at": "2026-04-23T06:11:04Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Borrower provided evidence of agreed extension.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "dismissed"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-04-18T11:45:27Z",
+    "updated_at": "2026-04-23T06:11:04Z"
+  },
+  {
+    "report_id": "RPT-00009",
+    "reporter_id": "USR-00017",
+    "target": {
+      "type": "user",
+      "id": "USR-00020",
+      "snapshot": {
+        "name": "Poppy Okoro",
+        "role": "lender",
+        "trust_score": 70.3
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Yoga Starter Kit (Mat, Blocks, Strap) and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-3071/800/600",
+          "type": "image",
+          "uploaded_at": "2026-04-25T19:20:37Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-6375/800/600",
+          "type": "image",
+          "uploaded_at": "2026-04-25T19:20:37Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00232",
+        "request_id": "REQ-00331"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-04-26T19:20:37Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": {
+      "action": "warning",
+      "notes": "First warning issued.",
+      "by": "USR-00002",
+      "at": "2026-04-27T10:31:05Z",
+      "effects": {
+        "user": {
+          "user_id": "USR-00020",
+          "action": "warning"
+        },
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-04-25T19:20:37Z",
+        "by": {
+          "user_id": "USR-00017",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-04-26T19:24:19Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-04-27T10:31:05Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "First warning issued.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-04-25T19:20:37Z",
+    "updated_at": "2026-04-27T10:31:05Z"
+  },
+  {
+    "report_id": "RPT-00010",
+    "reporter_id": "USR-00034",
+    "target": {
+      "type": "user",
+      "id": "USR-00022",
+      "snapshot": {
+        "name": "Sophia Clarke",
+        "role": "borrower",
+        "trust_score": 72.7
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Shure SM58 Vocal Microphone and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-7123/800/600",
+          "type": "image",
+          "uploaded_at": "2026-06-03T20:41:36Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-4295/800/600",
+          "type": "image",
+          "uploaded_at": "2026-06-03T20:41:36Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00252",
+        "request_id": "REQ-00356"
+      }
+    },
+    "status": "dismissed",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-06-04T20:41:36Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-06-03T20:41:36Z",
+        "by": {
+          "user_id": "USR-00034",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-06-04T20:30:54Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-06-06T20:32:06Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Borrower provided evidence of agreed extension.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "dismissed"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-06-03T20:41:36Z",
+    "updated_at": "2026-06-06T20:32:06Z"
+  },
+  {
+    "report_id": "RPT-00011",
+    "reporter_id": "USR-00043",
+    "target": {
+      "type": "review",
+      "id": "REV-00358",
+      "snapshot": {
+        "reviewer_id": "USR-00041",
+        "reviewed_user_id": "USR-00043",
+        "rating": 1,
+        "comment": "Cancelled pickup twice, frustrating."
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "inappropriate_review",
+      "description": "This review is unfair and not what happened."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-6160/800/600",
+          "type": "image",
+          "uploaded_at": "2026-06-21T03:03:28Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-9707/800/600",
+          "type": "image",
+          "uploaded_at": "2026-06-21T03:03:28Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "open",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-06-24T03:03:28Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-06-21T03:03:28Z",
+        "by": {
+          "user_id": "USR-00043",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-06-21T03:03:28Z",
+    "updated_at": "2026-06-21T03:03:28Z"
+  },
+  {
+    "report_id": "RPT-00012",
+    "reporter_id": "USR-00040",
+    "target": {
+      "type": "transaction",
+      "id": "TXN-00287",
+      "snapshot": {
+        "item": "Lonely Planet Japan Travel Guide",
+        "lender_id": "USR-00034",
+        "borrower_id": "USR-00040",
+        "status": "completed"
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "The lender kept part of my deposit for damage that was already there at pickup."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-5987/800/600",
+          "type": "image",
+          "uploaded_at": "2026-08-01T14:42:26Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {
+        "transaction_id": "TXN-00287",
+        "request_id": "REQ-00402"
+      }
+    },
+    "status": "under_review",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-08-02T14:42:26Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-08-01T14:42:26Z",
+        "by": {
+          "user_id": "USR-00040",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-08-01T18:28:42Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-08-01T14:42:26Z",
+    "updated_at": "2026-08-01T18:28:42Z"
+  },
+  {
+    "report_id": "RPT-00013",
+    "reporter_id": "USR-00019",
+    "target": {
+      "type": "item",
+      "id": "ITM-00010",
+      "snapshot": {
+        "name": "Makita Random Orbit Sander",
+        "category": "tools",
+        "owner_id": "USR-00010"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "misleading_description",
+      "description": "The listing photos don't match the actual item."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-4009/800/600",
+          "type": "image",
+          "uploaded_at": "2026-08-20T21:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "under_review",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-08-23T21:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-08-20T21:13:47Z",
+        "by": {
+          "user_id": "USR-00019",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-08-21T23:10:19Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-08-20T21:13:47Z",
+    "updated_at": "2026-08-21T23:10:19Z"
+  },
+  {
+    "report_id": "RPT-00014",
+    "reporter_id": "USR-00028",
+    "target": {
+      "type": "item",
+      "id": "ITM-00073",
+      "snapshot": {
+        "name": "Introduction to Algorithms (CLRS) 4th Ed.",
+        "category": "books",
+        "owner_id": "USR-00057"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "misleading_description",
+      "description": "The listing photos don't match the actual item."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-3459/800/600",
+          "type": "image",
+          "uploaded_at": "2026-09-23T12:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "dismissed",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-09-26T12:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-09-23T12:13:47Z",
+        "by": {
+          "user_id": "USR-00028",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-09-24T08:36:00Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-09-27T23:25:13Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Listing checked - accurate.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "dismissed"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-09-23T12:13:47Z",
+    "updated_at": "2026-09-27T23:25:13Z"
+  },
+  {
+    "report_id": "RPT-00015",
+    "reporter_id": "USR-00053",
+    "target": {
+      "type": "item",
+      "id": "ITM-00093",
+      "snapshot": {
+        "name": "Catan Board Game + Expansion",
+        "category": "gaming",
+        "owner_id": "USR-00061"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "misleading_description",
+      "description": "The listing photos don't match the actual item."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-5308/800/600",
+          "type": "image",
+          "uploaded_at": "2026-09-28T14:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-2433/800/600",
+          "type": "image",
+          "uploaded_at": "2026-09-28T14:13:47Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "open",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-10-01T14:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-09-28T14:13:47Z",
+        "by": {
+          "user_id": "USR-00053",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-09-28T14:13:47Z",
+    "updated_at": "2026-09-28T14:13:47Z"
+  },
+  {
+    "report_id": "RPT-00016",
+    "reporter_id": "USR-00009",
+    "target": {
+      "type": "item",
+      "id": "ITM-00021",
+      "snapshot": {
+        "name": "Stanley 150-Piece Household Tool Kit",
+        "category": "tools",
+        "owner_id": "USR-00017"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "prohibited_item",
+      "description": "This looks like it breaks the community rules."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-5166/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-02T17:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-3754/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-02T17:13:47Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "open",
+    "priority": "high",
+    "sla": {
+      "first_response_due": "2026-10-03T01:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "high",
+          "hours": {
+            "first_response": 8,
+            "resolution": 48
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-10-02T17:13:47Z",
+        "by": {
+          "user_id": "USR-00009",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-02T17:13:47Z",
+    "updated_at": "2026-10-02T17:13:47Z"
+  },
+  {
+    "report_id": "RPT-00017",
+    "reporter_id": "USR-00057",
+    "target": {
+      "type": "review",
+      "id": "REV-00494",
+      "snapshot": {
+        "reviewer_id": "USR-00030",
+        "reviewed_user_id": "USR-00057",
+        "rating": 2,
+        "comment": "Cancelled pickup twice, frustrating."
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "inappropriate_review",
+      "description": "This review is unfair and not what happened."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-1417/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-05T07:43:14Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "resolved",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-10-08T07:43:14Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": {
+      "action": "hide_review",
+      "notes": "Review violated guidelines.",
+      "by": "USR-00002",
+      "at": "2026-10-07T17:42:43Z",
+      "effects": {
+        "user": null,
+        "item": null,
+        "review": {
+          "review_id": "REV-00494",
+          "action": "hidden"
+        },
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-10-05T07:43:14Z",
+        "by": {
+          "user_id": "USR-00057",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-10-06T13:05:11Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-10-07T17:42:43Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "Review violated guidelines.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-05T07:43:14Z",
+    "updated_at": "2026-10-07T17:42:43Z"
+  },
+  {
+    "report_id": "RPT-00018",
+    "reporter_id": "USR-00022",
+    "target": {
+      "type": "item",
+      "id": "ITM-00028",
+      "snapshot": {
+        "name": "The Complete Sherlock Holmes",
+        "category": "books",
+        "owner_id": "USR-00010"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "misleading_description",
+      "description": "The listing photos don't match the actual item."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-9275/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-08T06:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-2528/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-08T06:13:47Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "resolved",
+    "priority": "low",
+    "sla": {
+      "first_response_due": "2026-10-11T06:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "low",
+          "hours": {
+            "first_response": 72,
+            "resolution": 240
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": {
+      "action": "remove_item",
+      "notes": "Listing breached guidelines.",
+      "by": "USR-00001",
+      "at": "2026-10-12T09:24:00Z",
+      "effects": {
+        "user": null,
+        "item": {
+          "item_id": "ITM-00028",
+          "action": "removed"
+        },
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-10-08T06:13:47Z",
+        "by": {
+          "user_id": "USR-00022",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-10-08T13:13:53Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      },
+      {
+        "at": "2026-10-12T09:24:00Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "Listing breached guidelines.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-08T06:13:47Z",
+    "updated_at": "2026-10-12T09:24:00Z"
+  },
+  {
+    "report_id": "RPT-00019",
+    "reporter_id": "USR-00024",
+    "target": {
+      "type": "transaction",
+      "id": "TXN-00366",
+      "snapshot": {
+        "item": "Anker 20000mAh Power Bank",
+        "lender_id": "USR-00046",
+        "borrower_id": "USR-00024",
+        "status": "completed"
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "item_damaged",
+      "description": "The lender kept part of my deposit for damage that was already there at pickup."
+    },
+    "evidence": {
+      "attachments": [],
+      "related": {
+        "transaction_id": "TXN-00366",
+        "request_id": "REQ-00509"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-10-14T01:58:07Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00002",
+    "resolution": {
+      "action": "none",
+      "notes": "Pickup photos confirm the damage was new.",
+      "by": "USR-00002",
+      "at": "2026-10-14T23:38:59Z",
+      "effects": {
+        "user": null,
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-10-13T01:58:07Z",
+        "by": {
+          "user_id": "USR-00024",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-10-13T22:33:35Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00002"
+          }
+        }
+      },
+      {
+        "at": "2026-10-14T23:38:59Z",
+        "by": {
+          "user_id": "USR-00002",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "Pickup photos confirm the damage was new.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-13T01:58:07Z",
+    "updated_at": "2026-10-14T23:38:59Z"
+  },
+  {
+    "report_id": "RPT-00020",
+    "reporter_id": "USR-00046",
+    "target": {
+      "type": "user",
+      "id": "USR-00024",
+      "snapshot": {
+        "name": "Yara Williams",
+        "role": "borrower",
+        "trust_score": 65.5
+      }
+    },
+    "reason": {
+      "category": "conduct",
+      "subcategory": "late_return",
+      "description": "Borrowed my Anker 20000mAh Power Bank and returned it days late without replying to messages."
+    },
+    "evidence": {
+      "attachments": [],
+      "related": {
+        "transaction_id": "TXN-00366",
+        "request_id": "REQ-00509"
+      }
+    },
+    "status": "resolved",
+    "priority": "medium",
+    "sla": {
+      "first_response_due": "2026-10-14T16:53:42Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "medium",
+          "hours": {
+            "first_response": 24,
+            "resolution": 120
+          }
+        }
+      }
+    },
+    "assigned_to": "USR-00001",
+    "resolution": {
+      "action": "warning",
+      "notes": "First warning issued.",
+      "by": "USR-00001",
+      "at": "2026-10-14T18:38:40Z",
+      "effects": {
+        "user": {
+          "user_id": "USR-00024",
+          "action": "warning"
+        },
+        "item": null,
+        "review": null,
+        "trust": null
+      }
+    },
+    "activity_log": [
+      {
+        "at": "2026-10-13T16:53:42Z",
+        "by": {
+          "user_id": "USR-00046",
+          "role": "lender"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      },
+      {
+        "at": "2026-10-14T05:34:01Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "updated",
+        "note": "Looking into this",
+        "changes": {
+          "status": {
+            "from": "open",
+            "to": "under_review"
+          },
+          "assigned_to": {
+            "from": null,
+            "to": "USR-00001"
+          }
+        }
+      },
+      {
+        "at": "2026-10-14T18:38:40Z",
+        "by": {
+          "user_id": "USR-00001",
+          "role": "admin"
+        },
+        "action": "resolved",
+        "note": "First warning issued.",
+        "changes": {
+          "status": {
+            "from": "under_review",
+            "to": "resolved"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-13T16:53:42Z",
+    "updated_at": "2026-10-14T18:38:40Z"
+  },
+  {
+    "report_id": "RPT-00021",
+    "reporter_id": "USR-00009",
+    "target": {
+      "type": "item",
+      "id": "ITM-00101",
+      "snapshot": {
+        "name": "Engineering Mathematics (Stroud) 8th Ed.",
+        "category": "books",
+        "owner_id": "USR-00063"
+      }
+    },
+    "reason": {
+      "category": "content",
+      "subcategory": "prohibited_item",
+      "description": "This looks like it breaks the community rules."
+    },
+    "evidence": {
+      "attachments": [
+        {
+          "url": "https://picsum.photos/seed/evidence-8058/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-14T09:13:47Z",
+          "meta": {
+            "size_kb": 180,
+            "mime": "image/jpeg"
+          }
+        },
+        {
+          "url": "https://picsum.photos/seed/evidence-4519/800/600",
+          "type": "image",
+          "uploaded_at": "2026-10-14T09:13:47Z",
+          "meta": {
+            "size_kb": 217,
+            "mime": "image/jpeg"
+          }
+        }
+      ],
+      "related": {}
+    },
+    "status": "open",
+    "priority": "high",
+    "sla": {
+      "first_response_due": "2026-10-14T17:13:47Z",
+      "escalation": {
+        "level": 0,
+        "policy": {
+          "name": "high",
+          "hours": {
+            "first_response": 8,
+            "resolution": 48
+          }
+        }
+      }
+    },
+    "assigned_to": null,
+    "resolution": null,
+    "activity_log": [
+      {
+        "at": "2026-10-14T09:13:47Z",
+        "by": {
+          "user_id": "USR-00009",
+          "role": "borrower"
+        },
+        "action": "created",
+        "note": "Report submitted",
+        "changes": {
+          "status": {
+            "from": null,
+            "to": "open"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-14T09:13:47Z",
+    "updated_at": "2026-10-14T09:13:47Z"
+  }
+]

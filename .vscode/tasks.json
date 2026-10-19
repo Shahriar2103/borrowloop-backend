@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup: create .venv and install requirements",
+      "type": "shell",
+      "windows": {"command": "python -m venv .venv; .\\.venv\\Scripts\\python -m pip install -r requirements.txt"},
+      "osx": {"command": "python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt"},
+      "linux": {"command": "python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Run API",
+      "type": "shell",
+      "windows": {"command": ".\\.venv\\Scripts\\python run.py"},
+      "osx": {"command": "./.venv/bin/python run.py"},
+      "linux": {"command": "./.venv/bin/python run.py"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "windows": {"command": ".\\.venv\\Scripts\\python -m pytest -v"},
+      "osx": {"command": "./.venv/bin/python -m pytest -v"},
+      "linux": {"command": "./.venv/bin/python -m pytest -v"},
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

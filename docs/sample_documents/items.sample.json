@@ -1,0 +1,354 @@
+{
+  "item_id": "ITM-00002",
+  "owner_id": "USR-00003",
+  "name": "Karcher K4 Pressure Washer",
+  "category": "tools",
+  "description": "Brings patios, decking and cars up like new.",
+  "condition": "new",
+  "availability": true,
+  "deposit": 55.0,
+  "created_at": "2025-04-25T15:13:47Z",
+  "updated_at": "2025-04-25T15:13:47Z",
+  "status": "active",
+  "taxonomy": {
+    "category": {
+      "key": "tools",
+      "label": "Tools & DIY"
+    },
+    "subcategory": {
+      "key": "cleaning",
+      "label": "Cleaning"
+    },
+    "type": "pressure_washer",
+    "tags": [
+      "pressure washer",
+      "patio",
+      "car"
+    ],
+    "attributes": {
+      "app_control": true
+    }
+  },
+  "details": {
+    "brand": "Karcher",
+    "model": "K4 Power Control",
+    "year": 2022,
+    "specifications": {
+      "technical": {
+        "pressure": {
+          "max_bar": 130
+        },
+        "flow": {
+          "litres_per_hour": 420
+        },
+        "hose": {
+          "length_m": 8,
+          "type": "high pressure"
+        }
+      },
+      "physical": {
+        "dimensions_cm": {
+          "length": 39,
+          "width": 30,
+          "height": 59
+        },
+        "weight_kg": 11.6,
+        "colour": "black"
+      }
+    },
+    "included_accessories": [
+      {
+        "name": "Patio cleaner attachment",
+        "quantity": 1
+      },
+      {
+        "name": "Vario lance",
+        "quantity": 1
+      },
+      {
+        "name": "Detergent",
+        "quantity": 1
+      }
+    ]
+  },
+  "condition_report": {
+    "grade": "new",
+    "summary": "Returned in new condition.",
+    "last_inspected_at": "2025-07-14T11:45:35Z",
+    "inspections": [
+      {
+        "at": "2025-05-21T16:27:19Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00005",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      },
+      {
+        "at": "2025-05-31T18:13:49Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00010",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      },
+      {
+        "at": "2025-06-06T14:34:35Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00011",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      },
+      {
+        "at": "2025-06-23T18:29:51Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00017",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      },
+      {
+        "at": "2025-07-08T13:23:00Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00023",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      },
+      {
+        "at": "2025-07-14T11:45:35Z",
+        "by": "USR-00003",
+        "context": "return:TXN-00024",
+        "result": {
+          "grade": "new",
+          "checklist": {
+            "cosmetic": {
+              "score": 5,
+              "notes": null
+            },
+            "functional": {
+              "score": 5,
+              "notes": null
+            },
+            "completeness": {
+              "complete": true,
+              "missing": []
+            }
+          },
+          "photos": []
+        }
+      }
+    ]
+  },
+  "pricing": {
+    "deposit": {
+      "amount": 55.0,
+      "currency": "GBP",
+      "refund_policy": {
+        "type": "full_refund_on_good_return",
+        "processing_days": 3,
+        "deductions": {
+          "late_return": {
+            "per_day": 2.75,
+            "max_total": 27.5
+          },
+          "damage": {
+            "minor": 13.75,
+            "major": 55.0
+          }
+        }
+      }
+    },
+    "late_fee": {
+      "per_day": 2.75,
+      "grace_period_hours": 6,
+      "currency": "GBP"
+    }
+  },
+  "lending_rules": {
+    "min_days": 1,
+    "max_days": 5,
+    "min_trust_score": 0,
+    "requires_id_verification": false,
+    "max_advance_booking_days": 60
+  },
+  "availability_details": {
+    "status": "available",
+    "current_transaction_id": null,
+    "next_available_from": "2025-04-25T15:13:47Z",
+    "calendar": {
+      "booked": [],
+      "blocked": []
+    }
+  },
+  "pickup": {
+    "methods": [
+      "collection",
+      "delivery"
+    ],
+    "location": {
+      "community": {
+        "neighbourhood": "Camden Town",
+        "borough": "Camden",
+        "zone": {
+          "code": "NW1-CAM",
+          "name": "Camden Town sharing circle",
+          "radius_km": 2.5
+        }
+      },
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          -0.146603,
+          51.536343
+        ]
+      }
+    },
+    "schedule": {
+      "weekdays": {
+        "slots": [
+          {
+            "from": "18:00",
+            "to": "20:30"
+          }
+        ]
+      },
+      "weekends": {
+        "slots": [
+          {
+            "from": "10:00",
+            "to": "12:00"
+          },
+          {
+            "from": "15:00",
+            "to": "18:00"
+          }
+        ]
+      }
+    }
+  },
+  "media": {
+    "cover_index": 0,
+    "images": [
+      {
+        "url": "https://picsum.photos/seed/itm-00002-0/1200/900",
+        "alt": "Karcher K4 Pressure Washer photo 1",
+        "variants": {
+          "thumb": {
+            "url": "https://picsum.photos/seed/itm-00002-0/1200/900?w=200",
+            "width": 200,
+            "height": 150
+          },
+          "full": {
+            "url": "https://picsum.photos/seed/itm-00002-0/1200/900?w=1200",
+            "width": 1200,
+            "height": 900
+          }
+        },
+        "uploaded_at": "2025-04-25T15:13:47Z"
+      }
+    ]
+  },
+  "stats": {
+    "views": 155,
+    "times_borrowed": 8,
+    "total_days_lent": 19,
+    "last_borrowed_at": "2025-07-10T17:49:13Z",
+    "rating": {
+      "average": 5.0,
+      "count": 3,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 3
+      }
+    }
+  },
+  "moderation": {
+    "status": "approved",
+    "flags": [],
+    "review": {
+      "by": null,
+      "at": null,
+      "decision": null
+    }
+  }
+}

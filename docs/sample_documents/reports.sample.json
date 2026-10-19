@@ -1,0 +1,119 @@
+{
+  "report_id": "RPT-00004",
+  "reporter_id": "USR-00012",
+  "target": {
+    "type": "user",
+    "id": "USR-00009",
+    "snapshot": {
+      "name": "Theo Edwards",
+      "role": "borrower",
+      "trust_score": 74.4
+    }
+  },
+  "reason": {
+    "category": "conduct",
+    "subcategory": "item_damaged",
+    "description": "Borrowed my Anker 20000mAh Power Bank and it came back damaged."
+  },
+  "evidence": {
+    "attachments": [
+      {
+        "url": "https://picsum.photos/seed/evidence-6507/800/600",
+        "type": "image",
+        "uploaded_at": "2025-11-30T13:00:12Z",
+        "meta": {
+          "size_kb": 180,
+          "mime": "image/jpeg"
+        }
+      }
+    ],
+    "related": {
+      "transaction_id": "TXN-00106",
+      "request_id": "REQ-00151"
+    }
+  },
+  "status": "resolved",
+  "priority": "medium",
+  "sla": {
+    "first_response_due": "2025-12-01T13:00:12Z",
+    "escalation": {
+      "level": 0,
+      "policy": {
+        "name": "medium",
+        "hours": {
+          "first_response": 24,
+          "resolution": 120
+        }
+      }
+    }
+  },
+  "assigned_to": "USR-00001",
+  "resolution": {
+    "action": "warning",
+    "notes": "First warning issued.",
+    "by": "USR-00001",
+    "at": "2025-12-03T23:07:24Z",
+    "effects": {
+      "user": {
+        "user_id": "USR-00009",
+        "action": "warning"
+      },
+      "item": null,
+      "review": null,
+      "trust": null
+    }
+  },
+  "activity_log": [
+    {
+      "at": "2025-11-30T13:00:12Z",
+      "by": {
+        "user_id": "USR-00012",
+        "role": "lender"
+      },
+      "action": "created",
+      "note": "Report submitted",
+      "changes": {
+        "status": {
+          "from": null,
+          "to": "open"
+        }
+      }
+    },
+    {
+      "at": "2025-12-01T16:24:38Z",
+      "by": {
+        "user_id": "USR-00001",
+        "role": "admin"
+      },
+      "action": "updated",
+      "note": "Looking into this",
+      "changes": {
+        "status": {
+          "from": "open",
+          "to": "under_review"
+        },
+        "assigned_to": {
+          "from": null,
+          "to": "USR-00001"
+        }
+      }
+    },
+    {
+      "at": "2025-12-03T23:07:24Z",
+      "by": {
+        "user_id": "USR-00001",
+        "role": "admin"
+      },
+      "action": "resolved",
+      "note": "First warning issued.",
+      "changes": {
+        "status": {
+          "from": "under_review",
+          "to": "resolved"
+        }
+      }
+    }
+  ],
+  "created_at": "2025-11-30T13:00:12Z",
+  "updated_at": "2025-12-03T23:07:24Z"
+}

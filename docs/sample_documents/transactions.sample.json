@@ -1,0 +1,272 @@
+{
+  "transaction_id": "TXN-00035",
+  "request_id": "REQ-00047",
+  "borrowed_at": "2025-08-08T09:42:31Z",
+  "returned_at": "2025-08-14T16:33:26Z",
+  "return_condition": "fair",
+  "status": "completed",
+  "created_at": "2025-08-08T09:42:31Z",
+  "updated_at": "2025-08-14T16:33:26Z",
+  "item_id": "ITM-00010",
+  "lender_id": "USR-00010",
+  "borrower_id": "USR-00004",
+  "due_date": "2025-08-13",
+  "parties": {
+    "lender": {
+      "user_id": "USR-00010",
+      "name": "Jack Brown",
+      "trust_at_start": {
+        "score": 63.8,
+        "tier": "silver"
+      }
+    },
+    "borrower": {
+      "user_id": "USR-00004",
+      "name": "Priya Shah",
+      "trust_at_start": {
+        "score": 87.4,
+        "tier": "platinum"
+      }
+    }
+  },
+  "item_snapshot": {
+    "name": "Makita Random Orbit Sander",
+    "category": "tools",
+    "condition_at_pickup": "good"
+  },
+  "handover": {
+    "pickup": {
+      "at": "2025-08-08T09:42:31Z",
+      "method": "meetup",
+      "location": {
+        "community": {
+          "neighbourhood": "Camden Town",
+          "borough": "Camden",
+          "zone": {
+            "code": "NW1-CAM",
+            "name": "Camden Town sharing circle",
+            "radius_km": 2.5
+          }
+        },
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            -0.145001,
+            51.544999
+          ]
+        }
+      },
+      "confirmations": {
+        "lender": {
+          "confirmed": true,
+          "at": "2025-08-08T09:42:31Z"
+        },
+        "borrower": {
+          "confirmed": true,
+          "at": "2025-08-08T09:42:31Z"
+        }
+      },
+      "condition_check": {
+        "grade": "good",
+        "checklist": {
+          "cosmetic": {
+            "score": 4,
+            "notes": null
+          },
+          "functional": {
+            "score": 4,
+            "notes": null
+          },
+          "completeness": {
+            "complete": true,
+            "missing": []
+          }
+        },
+        "photos": []
+      }
+    },
+    "return": {
+      "at": "2025-08-14T16:33:26Z",
+      "method": "meetup",
+      "location": {
+        "community": {
+          "neighbourhood": "Camden Town",
+          "borough": "Camden",
+          "zone": {
+            "code": "NW1-CAM",
+            "name": "Camden Town sharing circle",
+            "radius_km": 2.5
+          }
+        },
+        "geo": {
+          "type": "Point",
+          "coordinates": [
+            -0.145001,
+            51.544999
+          ]
+        }
+      },
+      "confirmations": {
+        "lender": {
+          "confirmed": true,
+          "at": "2025-08-14T16:33:26Z"
+        },
+        "borrower": {
+          "confirmed": true,
+          "at": "2025-08-14T16:33:26Z"
+        }
+      },
+      "condition_check": {
+        "grade": "fair",
+        "checklist": {
+          "cosmetic": {
+            "score": 3,
+            "notes": "Light scuffs on the casing."
+          },
+          "functional": {
+            "score": 3,
+            "notes": null
+          },
+          "completeness": {
+            "complete": true,
+            "missing": []
+          }
+        },
+        "photos": []
+      }
+    }
+  },
+  "return_assessment": {
+    "on_time": false,
+    "days_late": 1,
+    "condition_change": {
+      "from": "good",
+      "to": "fair",
+      "degraded_by": 1
+    },
+    "damage": {
+      "reported": true,
+      "severity": "minor",
+      "description": "Light scuffs on the casing."
+    },
+    "assessed_by": "USR-00010"
+  },
+  "payment": {
+    "currency": "GBP",
+    "deposit": {
+      "amount": 35.0,
+      "status": "partially_refunded",
+      "events": [
+        {
+          "type": "hold",
+          "amount": 35.0,
+          "at": "2025-08-08T09:42:31Z",
+          "reference": {
+            "provider": "stripe_test",
+            "id": "pi_12397c695efce16666ae"
+          }
+        },
+        {
+          "type": "refund",
+          "amount": 24.5,
+          "at": "2025-08-14T16:33:26Z",
+          "reference": {
+            "provider": "stripe_test",
+            "id": "pi_c1aa0c8da6bc427384fb"
+          }
+        },
+        {
+          "type": "capture",
+          "amount": 10.5,
+          "at": "2025-08-14T16:33:26Z",
+          "reference": {
+            "provider": "stripe_test",
+            "id": "pi_560a8f04235a4204ca38"
+          }
+        }
+      ],
+      "deductions": {
+        "late_fee": 1.75,
+        "damage_fee": 8.75,
+        "total": 10.5
+      },
+      "refunded_amount": 24.5
+    },
+    "late_fee": {
+      "per_day": 1.75,
+      "days": 1,
+      "amount": 1.75
+    }
+  },
+  "timeline": [
+    {
+      "event": "transaction_created",
+      "at": "2025-08-08T09:42:31Z",
+      "actor": {
+        "user_id": "USR-00010",
+        "role": "lender"
+      },
+      "meta": {
+        "request_id": "REQ-00047"
+      }
+    },
+    {
+      "event": "item_collected",
+      "at": "2025-08-08T09:42:31Z",
+      "actor": {
+        "user_id": "USR-00004",
+        "role": "borrower"
+      },
+      "meta": {
+        "condition": "good",
+        "deposit": {
+          "amount": 35.0,
+          "currency": "GBP"
+        }
+      }
+    },
+    {
+      "event": "item_returned",
+      "at": "2025-08-14T16:33:26Z",
+      "actor": {
+        "user_id": "USR-00010",
+        "role": "lender"
+      },
+      "meta": {
+        "condition": "fair",
+        "days_late": 1
+      }
+    },
+    {
+      "event": "deposit_settled",
+      "at": "2025-08-14T16:33:26Z",
+      "actor": {
+        "user_id": "system",
+        "role": "system"
+      },
+      "meta": {
+        "refunded": 24.5,
+        "deducted": 10.5,
+        "status": "partially_refunded"
+      }
+    }
+  ],
+  "reminders": [
+    {
+      "type": "return_due_tomorrow",
+      "channel": "push",
+      "scheduled_for": "2025-08-12",
+      "sent": true
+    },
+    {
+      "type": "return_due_today",
+      "channel": "email",
+      "scheduled_for": "2025-08-13",
+      "sent": true
+    }
+  ],
+  "dispute": {
+    "open": false,
+    "report_id": null
+  }
+}

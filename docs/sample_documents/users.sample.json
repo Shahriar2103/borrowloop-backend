@@ -1,0 +1,486 @@
+{
+  "user_id": "USR-00003",
+  "name": "Oliver Bennett",
+  "email": "lender@borrowloop.com",
+  "password_hash": "pbkdf2:sha256:100000$wB0aKd89w0xPOSQE$aefc6c13e752f19e8350767967aa3ef962e37db5f27740746d2de53767160e30",
+  "role": "lender",
+  "trust_score": 86.2,
+  "created_at": "2025-04-05T20:13:47Z",
+  "updated_at": "2026-10-18T12:34:26Z",
+  "profile": {
+    "display_name": "Oliver",
+    "bio": "Musician and podcaster.",
+    "avatar": {
+      "url": "https://api.dicebear.com/7.x/initials/svg?seed=USR-00003",
+      "variants": {
+        "small": {
+          "url": "https://api.dicebear.com/7.x/initials/svg?seed=USR-00003&size=64",
+          "width": 64,
+          "height": 64
+        },
+        "large": {
+          "url": "https://api.dicebear.com/7.x/initials/svg?seed=USR-00003&size=256",
+          "width": 256,
+          "height": 256
+        }
+      }
+    },
+    "contact": {
+      "phone": {
+        "number": "07106513338",
+        "country_code": "+44",
+        "verified": true
+      },
+      "preferred_method": "in_app"
+    },
+    "location": {
+      "address": {
+        "line1": "14 Canal Walk",
+        "city": "London",
+        "postcode": "NW1 3SG",
+        "country": "United Kingdom"
+      },
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          -0.146603,
+          51.536343
+        ]
+      },
+      "community": {
+        "neighbourhood": "Camden Town",
+        "borough": "Camden",
+        "zone": {
+          "code": "NW1-CAM",
+          "name": "Camden Town sharing circle",
+          "radius_km": 2.5
+        }
+      }
+    },
+    "interests": [
+      "music",
+      "party_events",
+      "garden",
+      "sports_outdoor"
+    ]
+  },
+  "preferences": {
+    "notifications": {
+      "channels": {
+        "email": {
+          "enabled": true,
+          "frequency": "instant"
+        },
+        "push": {
+          "enabled": true,
+          "quiet_hours": {
+            "from": "22:00",
+            "to": "07:30"
+          }
+        },
+        "sms": {
+          "enabled": false
+        }
+      },
+      "events": {
+        "borrow_requests": {
+          "enabled": true,
+          "channels": [
+            "email",
+            "push"
+          ]
+        },
+        "request_updates": {
+          "enabled": true,
+          "channels": [
+            "push"
+          ]
+        },
+        "return_reminders": {
+          "enabled": true,
+          "channels": [
+            "push",
+            "email"
+          ],
+          "schedule": {
+            "days_before_due": 2,
+            "time_of_day": "09:00"
+          }
+        },
+        "reviews": {
+          "enabled": true,
+          "channels": [
+            "email"
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "profile_visibility": "members",
+      "show_location": "neighbourhood",
+      "show_phone": false
+    },
+    "lending": {
+      "auto_decline_below_trust": 35,
+      "max_concurrent_loans": 5,
+      "default_deposit": {
+        "amount": 0.0,
+        "currency": "GBP"
+      }
+    }
+  },
+  "verification": {
+    "level": "full",
+    "email": {
+      "verified": true,
+      "verified_at": "2025-04-05T20:13:47Z"
+    },
+    "phone": {
+      "verified": true,
+      "verified_at": "2025-04-05T20:13:47Z"
+    },
+    "identity": {
+      "status": "verified",
+      "document": {
+        "type": "passport",
+        "country": "GB",
+        "check": {
+          "method": "manual_review",
+          "by": "USR-00001",
+          "at": "2025-04-08T14:51:29Z"
+        }
+      }
+    }
+  },
+  "trust_profile": {
+    "score": 86.2,
+    "tier": "platinum",
+    "last_calculated": "2026-10-18T17:13:47Z",
+    "breakdown": {
+      "return_reliability": {
+        "value": 0.7,
+        "weight": 0.35,
+        "points": 24.5,
+        "details": {
+          "completed_borrows": 4,
+          "on_time": 2,
+          "late": 2,
+          "damaged": 0,
+          "late_cancellations": 0
+        }
+      },
+      "review_rating": {
+        "value": 0.892,
+        "weight": 0.3,
+        "points": 26.76,
+        "details": {
+          "reviews": 19,
+          "raw_average": 4.74,
+          "smoothed_average": 4.57
+        }
+      },
+      "account_standing": {
+        "value": 1.0,
+        "weight": 0.15,
+        "points": 15.0,
+        "details": {
+          "email_verified": true,
+          "phone_verified": true,
+          "identity_status": "verified",
+          "account_status": "active"
+        }
+      },
+      "lending_reliability": {
+        "value": 0.99,
+        "weight": 0.1,
+        "points": 9.9,
+        "details": {
+          "completed_loans": 30,
+          "lender_cancellations": 0
+        }
+      },
+      "experience": {
+        "value": 1.0,
+        "weight": 0.1,
+        "points": 10.0,
+        "details": {
+          "completed_transactions": 34,
+          "account_age_days": 560
+        }
+      },
+      "conduct_penalty": {
+        "value": null,
+        "weight": null,
+        "points": -0.0,
+        "details": {
+          "upheld_reports": 0,
+          "points_per_report": 6.0
+        }
+      }
+    },
+    "summary": {
+      "completed_borrows": 4,
+      "completed_loans": 30,
+      "reviews_received": 19,
+      "average_rating": 4.74
+    },
+    "history": [
+      {
+        "at": "2025-04-06T20:13:47Z",
+        "score": 65.3,
+        "change": null,
+        "reason": "account_created"
+      },
+      {
+        "at": "2025-05-06T20:13:47Z",
+        "score": 65.5,
+        "change": 0.2,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-06-05T20:13:47Z",
+        "score": 79.1,
+        "change": 13.6,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-07-05T20:13:47Z",
+        "score": 82.9,
+        "change": 3.8,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-08-04T20:13:47Z",
+        "score": 83.2,
+        "change": 0.3,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-09-03T20:13:47Z",
+        "score": 84.1,
+        "change": 0.9,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-10-03T20:13:47Z",
+        "score": 84.5,
+        "change": 0.4,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-11-02T20:13:47Z",
+        "score": 84.7,
+        "change": 0.2,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2025-12-02T20:13:47Z",
+        "score": 85.0,
+        "change": 0.3,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-01-01T20:13:47Z",
+        "score": 85.2,
+        "change": 0.2,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-01-31T20:13:47Z",
+        "score": 85.5,
+        "change": 0.3,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-03-02T20:13:47Z",
+        "score": 85.7,
+        "change": 0.2,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-04-01T20:13:47Z",
+        "score": 83.4,
+        "change": -2.3,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-05-01T20:13:47Z",
+        "score": 83.4,
+        "change": 0.0,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-05-31T20:13:47Z",
+        "score": 83.4,
+        "change": 0.0,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-06-30T20:13:47Z",
+        "score": 83.4,
+        "change": 0.0,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-07-30T20:13:47Z",
+        "score": 86.2,
+        "change": 2.8,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-08-29T20:13:47Z",
+        "score": 86.2,
+        "change": 0.0,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-09-28T20:13:47Z",
+        "score": 86.2,
+        "change": 0.0,
+        "reason": "monthly_recalculation"
+      },
+      {
+        "at": "2026-10-18T17:13:47Z",
+        "score": 86.2,
+        "change": null,
+        "reason": "dataset_snapshot"
+      }
+    ]
+  },
+  "stats": {
+    "borrowing": {
+      "total_requests": 8,
+      "completed": 4,
+      "active": 0,
+      "late_returns": 2,
+      "on_time_rate": 0.5,
+      "categories": {
+        "electronics": 1,
+        "sports_outdoor": 1,
+        "books": 1,
+        "music": 1
+      }
+    },
+    "lending": {
+      "items_listed": 8,
+      "requests_received": 44,
+      "completed": 30,
+      "active": 0,
+      "acceptance_rate": 0.886,
+      "total_days_lent": 133
+    },
+    "reviews": {
+      "received": {
+        "count": 19,
+        "average": 4.74,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 3,
+          "5": 15
+        }
+      },
+      "given": {
+        "count": 25
+      }
+    }
+  },
+  "account": {
+    "status": "active",
+    "last_login_at": "2026-10-18T12:34:26Z",
+    "login_history": [
+      {
+        "at": "2026-07-23T12:11:52Z",
+        "ip": "81.121.85.105",
+        "device": {
+          "type": "desktop",
+          "os": {
+            "name": "Windows"
+          },
+          "browser": {
+            "name": "Chrome",
+            "user_agent": "Chrome on Windows"
+          }
+        }
+      },
+      {
+        "at": "2026-09-05T09:29:43Z",
+        "ip": "81.205.30.43",
+        "device": {
+          "type": "mobile",
+          "os": {
+            "name": "Android"
+          },
+          "browser": {
+            "name": "Chrome",
+            "user_agent": "Chrome on Android"
+          }
+        }
+      },
+      {
+        "at": "2026-09-23T01:05:28Z",
+        "ip": "81.249.79.49",
+        "device": {
+          "type": "mobile",
+          "os": {
+            "name": "Android"
+          },
+          "browser": {
+            "name": "Chrome",
+            "user_agent": "Chrome on Android"
+          }
+        }
+      },
+      {
+        "at": "2026-09-29T02:59:44Z",
+        "ip": "81.29.31.192",
+        "device": {
+          "type": "mobile",
+          "os": {
+            "name": "iPhone"
+          },
+          "browser": {
+            "name": "Safari",
+            "user_agent": "Safari on iPhone"
+          }
+        }
+      },
+      {
+        "at": "2026-10-18T12:34:26Z",
+        "ip": "81.199.135.238",
+        "device": {
+          "type": "mobile",
+          "os": {
+            "name": "Android"
+          },
+          "browser": {
+            "name": "Chrome",
+            "user_agent": "Chrome on Android"
+          }
+        }
+      }
+    ],
+    "badges": [
+      {
+        "code": "early_member",
+        "label": "Early Member",
+        "awarded_at": "2026-04-05T20:13:47Z"
+      },
+      {
+        "code": "super_lender",
+        "label": "Super Lender",
+        "awarded_at": "2026-10-18T12:34:26Z"
+      },
+      {
+        "code": "fully_verified",
+        "label": "Fully Verified",
+        "awarded_at": "2025-04-05T20:13:47Z"
+      }
+    ],
+    "moderation": {
+      "warnings": [],
+      "suspension": null
+    }
+  }
+}
