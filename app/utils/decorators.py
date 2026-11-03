@@ -1,26 +1,69 @@
-"""Route protection decorators. The authenticated user document is placed on flask.g.user."""
+"""Route protection decorators. The authenticated user is stored in flask.g.user."""
+
 from functools import wraps
 
 from flask import g, request
 
 from ..database import USERS, get_db
 from .responses import ApiError
-from .security import decode_token
+from .security import decode_token, verify_password
 
 
 def _load_user_from_header(required=True):
     header = request.headers.get("Authorization", "")
-    if not header.startswith("Bearer "):
+    user = None
+
+    # Basic Authentication
+    if header.lower().startswith("basic "):
+        credentials = request.authorization
+
+        if not credentials or not credentials.username or not credentials.password:
+            raise ApiError("Valid Basic Auth credentials are required.", 401)
+
+        email = credentials.username.strip()
+
+        user = get_db()[USERS].find_one({"email": email})
+
+        if not user or not verify_password(
+            user.get("password_hash"),
+            credentials.password
+        ):
+            raise ApiError("Invalid email or password.", 401)
+
+    # Bearer Token (JWT)
+    elif header.lower().startswith("bearer "):
+        token = header.split(" ", 1)[1].strip()
+        payload = decode_token(token)
+
+        user = get_db()[USERS].find_one({
+            "user_id": payload.get("sub")
+        })
+
+        if not user:
+            raise ApiError(
+                "The account for this token no longer exists.",
+                401,
+                "invalid_token"
+            )
+
+    else:
         if required:
-            raise ApiError("Authentication required. Send 'Authorization: Bearer <token>'.", 401)
+            raise ApiError(
+                "Authentication required. Use Basic Auth or Bearer Token.",
+                401
+            )
         return None
-    payload = decode_token(header.split(" ", 1)[1].strip())
-    user = get_db()[USERS].find_one({"user_id": payload.get("sub")})
-    if not user:
-        raise ApiError("The account for this token no longer exists.", 401, "invalid_token")
+
+    # Check account status
     status = user.get("account", {}).get("status", "active")
+
     if status != "active":
-        raise ApiError(f"This account is {status}. Contact support.", 403, "account_" + status)
+        raise ApiError(
+            f"This account is {status}. Contact support.",
+            403,
+            "account_" + status
+        )
+
     return user
 
 
@@ -37,8 +80,10 @@ def admin_required(fn):
     @wraps(fn)
     def wrapper(*args, **kwargs):
         g.user = _load_user_from_header(required=True)
+
         if g.user.get("role") != "admin":
             raise ApiError("Administrator access required.", 403)
+
         return fn(*args, **kwargs)
 
     return wrapper
@@ -51,6 +96,7 @@ def auth_optional(fn):
             g.user = _load_user_from_header(required=False)
         except ApiError:
             g.user = None
+
         return fn(*args, **kwargs)
 
     return wrapper
